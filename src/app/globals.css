@@ -1,26 +1,104 @@
+@font-face {
+  font-family: 'Stack Sans Notch';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/stack-sans-notch:vf@latest/latin-wght-normal.woff2') format('woff2-variations');
+}
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #111111;
+  --accent: #EF3B2D;
+  --muted: #71716e;
+  --border: #e4e4e0;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: var(--accent);
+  --color-muted-text: var(--muted);
+  --color-border-light: var(--border);
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-stack-notch: "Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive Image Splitting Grid */
+@media (min-width: 768px) {
+  .split-image-container {
+    --gap: 32px; /* md:gap-8 is 2rem = 32px */
+  }
+  .split-image-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: calc(300% + 2 * var(--gap)) !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    image-rendering: -webkit-optimize-contrast !important;
+  }
+  .split-image-0 {
+    left: 0 !important;
+  }
+  .split-image-1 {
+    left: calc(-100% - var(--gap)) !important;
+  }
+  .split-image-2 {
+    left: calc(-200% - 2 * var(--gap)) !important;
+  }
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+
