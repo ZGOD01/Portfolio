@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ImageGrid from "@/components/ImageGrid";
 import Marquee from "@/components/Marquee";
-import AboutSection from "@/components/AboutSection";
+import IntroSection from "@/components/IntroSection";
 import ProofSection from "@/components/ProofSection";
 import RecognitionSection from "@/components/RecognitionSection";
 import WorksSection from "@/components/WorksSection";
@@ -16,7 +16,7 @@ export default function Home() {
         <HeroSection />
         <ImageGrid />
         <Marquee />
-        <AboutSection />
+        <IntroSection />
         <ProofSection />
         <RecognitionSection />
         <WorksSection />

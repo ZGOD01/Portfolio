@@ -88,21 +88,21 @@ const patternSet = [
 ];
 
 const pageLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Works", href: "#works" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Works", href: "/work" },
+  { label: "Resume", href: "/resume" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/om-gadhave-996138335/",
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/",
+    href: "https://wa.me/9322532936",
   },
 ];
 

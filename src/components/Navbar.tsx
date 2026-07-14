@@ -2,13 +2,24 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const NAV_ITEMS = ["HOME", "ABOUT", "WORKS", "RESUME", "CONTACT"];
+const NAV_ITEMS = [
+  { label: "HOME", href: "/" },
+  { label: "ABOUT", href: "/about" },
+  { label: "WORKS", href: "/#works" },
+  { label: "RESUME", href: "/#resume" },
+  { label: "CONTACT", href: "/#contact" },
+];
 
 export default function Navbar() {
-  const [activeItem, setActiveItem] = useState("HOME");
+  const pathname = usePathname();
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Active state logic matching pathname
+  const activeItem = pathname === "/about" ? "ABOUT" : "HOME";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,12 +49,12 @@ export default function Navbar() {
       {/* Floating Pill Menu Container */}
       <nav className="flex items-center gap-[4px] p-[7px] bg-[#F5F5F5] border border-[#E5E5E5] rounded-[18px] shadow-sm select-none">
         {NAV_ITEMS.map((item) => {
-          const isActive = activeItem === item;
+          const isActive = activeItem === item.label;
           return (
-            <button
-              key={item}
-              onClick={() => setActiveItem(item)}
-              className="relative h-[36px] px-[20px] text-[14px] font-normal uppercase tracking-normal rounded-[10px] focus:outline-none cursor-pointer flex items-center justify-center"
+            <Link
+              key={item.label}
+              href={item.href}
+              className="relative h-[36px] px-[20px] text-[14px] font-normal uppercase tracking-normal rounded-[10px] focus:outline-none cursor-pointer flex items-center justify-center decoration-none no-underline"
             >
               {isActive && (
                 <motion.span
@@ -55,11 +66,11 @@ export default function Navbar() {
               <motion.span
                 animate={{ color: isActive ? "#FFFFFF" : "#000000" }}
                 transition={{ duration: 0.25 }}
-                className="relative z-10"
+                className="relative z-10 font-sans"
               >
-                {item}
+                {item.label}
               </motion.span>
-            </button>
+            </Link>
           );
         })}
       </nav>

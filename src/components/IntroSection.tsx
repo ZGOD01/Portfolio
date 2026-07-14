@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function AboutSection() {
+export default function IntroSection() {
   const containerVariants = {
     hidden: { opacity: 0, y: 15 },
     visible: {
