@@ -101,83 +101,124 @@ export default function SummarySection() {
       </div>
 
       {/* Bottom Tools Dock/Tray */}
-      <div className="mt-20 mx-auto w-full max-w-6xl bg-[#F6F6F6] border border-[#EBEBEB] rounded-[28px] p-4 md:p-5 flex flex-nowrap items-center justify-start md:justify-center gap-3 md:gap-4 overflow-x-auto scrollbar-none shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+      <div className="mt-20 mx-auto w-full max-w-6xl bg-[#F6F6F6] border border-[#EBEBEB] rounded-[28px] p-4 md:p-5 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+        <div className="grid grid-cols-4 gap-3 md:flex md:flex-wrap md:items-center md:justify-center md:gap-4">
         {/* Figma */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/figma.png" alt="Figma" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/figma.png" alt="Figma" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Figma</span>
         </div>
 
         {/* HTML */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/html.png" alt="HTML" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/html.png" alt="HTML" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">HTML</span>
         </div>
 
         {/* CSS */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/css.png" alt="CSS" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/css.png" alt="CSS" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">CSS</span>
         </div>
 
         {/* ReactJs */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/ReactJs.png" alt="React" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/ReactJs.png" alt="React" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">React</span>
         </div>
 
         {/* Expo */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/expo.png" alt="Expo" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/expo.png" alt="Expo" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Expo</span>
         </div>
 
         {/* ExpressJs */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/ExpressJs.png" alt="Express" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/ExpressJs.png" alt="Express" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Express</span>
         </div>
 
         {/* MongoDB */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/MongoDB.png" alt="MongoDB" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/MongoDB.png" alt="MongoDB" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">MongoDB</span>
         </div>
 
         {/* PostgreSQL */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/PostgreSQL.png" alt="PostgreSQL" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/PostgreSQL.png" alt="PostgreSQL" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Postgres</span>
         </div>
 
         {/* Firebase */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/Firebase.png" alt="Firebase" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/Firebase.png" alt="Firebase" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Firebase</span>
         </div>
 
         {/* Python */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/python.png" alt="Python" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/python.png" alt="Python" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Python</span>
         </div>
 
         {/* C++ */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/cpp.png" alt="C++" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/cpp.png" alt="C++" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">C++</span>
         </div>
 
         {/* AWS */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/aws.png" alt="AWS" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/aws.png" alt="AWS" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">AWS</span>
         </div>
 
         {/* Git */}
-        <div className="w-16 h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:scale-105 hover:-translate-y-1.5 transition-all duration-300 ease-out">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/git.png" alt="Git" className="w-11 h-11 object-contain" />
+        <div className="flex flex-col items-center gap-1.5 group">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-[#EBEBEB]/60 rounded-[14px] md:rounded-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.02)] group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/git.png" alt="Git" className="w-9 h-9 md:w-11 md:h-11 object-contain" />
+          </div>
+          <span className="text-[10px] font-medium text-[#9A9A9A] md:hidden">Git</span>
+        </div>
         </div>
       </div>
 
