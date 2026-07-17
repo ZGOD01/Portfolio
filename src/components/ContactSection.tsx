@@ -131,10 +131,10 @@ export default function ContactSection() {
             >
               <div className="relative">
                 {/* Red Square Backdrop Wrapper */}
-                <div className="relative p-[2px] rounded-[7px] bg-gradient-to-tr from-[#FF9F43] via-[#FF3366] to-[#DF1D24] shadow-sm">
+                <div className="relative p-[1.5px] sm:p-[2px] rounded-[4px] sm:rounded-[7px] bg-gradient-to-tr from-[#FF9F43] via-[#FF3366] to-[#DF1D24] shadow-sm">
 
                   {/* Square Photo Container */}
-                  <div className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] rounded-[5px] overflow-hidden border border-white bg-white">
+                  <div className="w-[16px] h-[16px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] rounded-[3px] sm:rounded-[5px] overflow-hidden border border-white bg-white">
                     <img
                       src={avatar.src}
                       alt="Profile Avatar"

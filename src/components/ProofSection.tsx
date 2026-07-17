@@ -56,7 +56,7 @@ export default function ProofSection() {
                 <img
                   src="/images/logo-sppu.png"
                   alt="SPPU Notes"
-                  className="block h-auto w-full max-w-[340px] object-contain object-left sm:max-w-[380px]"
+                  className="block h-auto w-full max-w-[260px] sm:max-w-[340px] object-contain object-left"
                 />
               </div>
 

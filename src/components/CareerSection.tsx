@@ -122,50 +122,52 @@ export default function CareerSection() {
             {/* Header Block: Logo, Role Title, Date Badge */}
             <motion.div 
               variants={childVariants}
-              className="flex flex-wrap items-center gap-3 md:gap-4 mb-8"
+              className="flex items-start md:items-center gap-4 mb-8 text-left"
             >
               {/* Custom Logo rendering */}
-              {item.logoType === "freelance" && (
-                <div className="flex items-center justify-center bg-gradient-to-br from-[#6366F1] to-[#4F46E5] w-12 h-12 rounded-[10px] shadow-sm text-white select-none hover:scale-105 transition-transform duration-200">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                    <line x1="8" y1="21" x2="16" y2="21" />
-                    <line x1="12" y1="17" x2="12" y2="21" />
-                  </svg>
-                </div>
-              )}
+              <div className="shrink-0">
+                {item.logoType === "freelance" && (
+                  <div className="flex items-center justify-center bg-gradient-to-br from-[#6366F1] to-[#4F46E5] w-12 h-12 rounded-[10px] shadow-sm text-white select-none hover:scale-105 transition-transform duration-200">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  </div>
+                )}
 
-              {item.logoType === "aws" && (
-                <div className="flex items-center justify-center bg-white border border-[#EBEBEB] w-12 h-12 rounded-[10px] shadow-sm overflow-hidden p-1.5 hover:scale-105 transition-transform duration-200">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/icons/aws.png" alt="AWS" className="w-full h-full object-contain" />
-                </div>
-              )}
+                {item.logoType === "aws" && (
+                  <div className="flex items-center justify-center bg-white border border-[#EBEBEB] w-12 h-12 rounded-[10px] shadow-sm overflow-hidden p-1.5 hover:scale-105 transition-transform duration-200">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/icons/aws.png" alt="AWS" className="w-full h-full object-contain" />
+                  </div>
+                )}
 
-              {item.logoType === "brainlyhood" && (
-                <div className="flex items-center justify-center bg-gradient-to-br from-[#F59E0B] to-[#EF4444] w-12 h-12 rounded-[10px] shadow-sm text-white select-none hover:scale-105 transition-transform duration-200">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-                    <path d="M9 18h6" />
-                    <path d="M10 22h4" />
-                  </svg>
-                </div>
-              )}
+                {item.logoType === "brainlyhood" && (
+                  <div className="flex items-center justify-center bg-gradient-to-br from-[#F59E0B] to-[#EF4444] w-12 h-12 rounded-[10px] shadow-sm text-white select-none hover:scale-105 transition-transform duration-200">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                      <path d="M9 18h6" />
+                      <path d="M10 22h4" />
+                    </svg>
+                  </div>
+                )}
+              </div>
 
-              {/* Role Title */}
-              <h3 
-                className="text-[20px] md:text-[24px] font-bold text-black tracking-tight"
-                style={{
-                  fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif',
-                }}
-              >
-                {item.role}
-              </h3>
-
-              {/* Date Badge */}
-              <span className="px-3 py-1 bg-[#F4F4F0] border border-[#E5E5E2] rounded-full text-[12px] font-medium text-[#5C5C5C] select-none">
-                {item.period}
-              </span>
+              {/* Text Block (Title & Date Badge responsive stacking) */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <h3 
+                  className="text-[19px] sm:text-[22px] md:text-[24px] font-bold text-black tracking-tight leading-snug"
+                  style={{
+                    fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif',
+                  }}
+                >
+                  {item.role}
+                </h3>
+                <span className="w-fit px-3 py-1 bg-[#F4F4F0] border border-[#E5E5E2] rounded-full text-[11px] sm:text-[12px] font-medium text-[#5C5C5C] select-none uppercase tracking-wide">
+                  {item.period}
+                </span>
+              </div>
             </motion.div>
 
             {/* Descriptions Grid (4 columns, hoverable card blocks) */}

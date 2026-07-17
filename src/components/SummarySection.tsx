@@ -62,38 +62,38 @@ export default function SummarySection() {
               fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif',
             }}
           >
-            <span className="text-[#E54B4B] font-normal">I design products that get out of the way.</span> 3+ years across fintech, SaaS and consumer apps – from the brief to the build. I care about clarity, calmness and the boring details no one notices when they&apos;re done right.
+            <span className="text-[#E54B4B] font-normal">I design products that get out of the way .</span> <span> </span>3+ years across fintech, SaaS and consumer apps – from the brief to the build. I care about clarity, calmness and the boring details no one notices when they&apos;re done right.
           </p>
         </div>
 
         {/* Right Column: Metadata List Table */}
         <div className="md:col-span-5 border-t border-[#E5E5E2]">
           {/* Row 1: BASED */}
-          <div className="flex justify-between items-center py-5 border-b border-[#E5E5E2] text-[15px] md:text-[16px]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between py-5 border-b border-[#E5E5E2] gap-1.5 sm:gap-0 text-[15px] md:text-[16px] text-left">
             <span className="font-bold tracking-wider text-[#767676] text-[11px] md:text-[12px] uppercase">
               BASED
             </span>
-            <span className="text-[#111111] font-medium flex items-center gap-2">
+            <span className="text-[#111111] font-medium flex items-center gap-2 sm:text-right">
               Maharashtra, IN <span className="text-[#DF1D24] text-[10px] select-none">♦</span> {mounted ? time : "12:38 am"}
             </span>
           </div>
 
           {/* Row 2: CURRENTLY */}
-          <div className="flex justify-between items-center py-5 border-b border-[#E5E5E2] text-[15px] md:text-[16px]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between py-5 border-b border-[#E5E5E2] gap-1.5 sm:gap-0 text-[15px] md:text-[16px] text-left">
             <span className="font-bold tracking-wider text-[#767676] text-[11px] md:text-[12px] uppercase">
               CURRENTLY
             </span>
-            <span className="text-[#111111] font-medium flex items-center gap-2">
+            <span className="text-[#111111] font-medium flex items-center gap-2 sm:text-right">
               Freelancer <span className="text-[#DF1D24] text-[10px] select-none">♦</span> Student
             </span>
           </div>
 
           {/* Row 3: DOMAIN */}
-          <div className="flex justify-between items-center py-5 border-b border-[#E5E5E2] text-[15px] md:text-[16px]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between py-5 border-b border-[#E5E5E2] gap-1.5 sm:gap-0 text-[15px] md:text-[16px] text-left">
             <span className="font-bold tracking-wider text-[#767676] text-[11px] md:text-[12px] uppercase">
               DOMAIN
             </span>
-            <span className="text-[#111111] font-medium">
+            <span className="text-[#111111] font-medium sm:text-right">
               Data Science · Development
             </span>
           </div>

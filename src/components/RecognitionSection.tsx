@@ -2,61 +2,56 @@
 
 import { motion } from "framer-motion";
 
-type AwardLogoType = "awwwards" | "figma" | "checkered";
+type RecognitionLogoType =
+  | "figma"
+  | "developer"
+  | "hackathon"
+  | "finalist";
 
-interface AwardItem {
+interface RecognitionItem {
   id: string;
   title: string;
   subtitle: string;
   year: string;
-  logoType: AwardLogoType;
+  logoType: RecognitionLogoType;
 }
 
-const AWARDS: AwardItem[] = [
+const RECOGNITIONS: RecognitionItem[] = [
   {
-    id: "awwwards-young-jury",
-    title: "Awwwards Young Jury",
-    subtitle: "Jury Member",
-    year: "(2026, 2025)",
-    logoType: "awwwards",
-  },
-  {
-    id: "awwwards-honors",
-    title: "Awwwards Honors",
-    subtitle: "enric.design",
+    id: "ui-ux-coordinator",
+    title: "UI/UX Coordinator",
+    subtitle: "College Technical Event",
     year: "(2025)",
-    logoType: "awwwards",
-  },
-  {
-    id: "config-apac",
-    title: "Config APAC Attendee",
-    subtitle: "Singapore",
-    year: "(2024)",
     logoType: "figma",
   },
   {
-    id: "huddle-designers",
-    title: "Huddle Designers Award",
-    subtitle: "Kelp Kookies",
-    year: "(2023)",
-    logoType: "checkered",
+    id: "college-fest-developer",
+    title: "College Fest Web Developer",
+    subtitle: "Technical Fest Website Team",
+    year: "(2025)",
+    logoType: "developer",
+  },
+  {
+    id: "hackathon-participant",
+    title: "Hackathon Participant",
+    subtitle: "AI & Web Development",
+    year: "(2025)",
+    logoType: "hackathon",
+  },
+  {
+    id: "project-showcase-finalist",
+    title: "Project Showcase Finalist",
+    subtitle: "Department Project Exhibition",
+    year: "(2026)",
+    logoType: "finalist",
   },
 ];
 
-function AwardLogo({ logoType }: { logoType: AwardLogoType }) {
-  if (logoType === "awwwards") {
-    return (
-      <span
-        className="text-[32px] font-bold leading-none text-[#606060]"
-        style={{
-          fontFamily: "Georgia, 'Times New Roman', serif",
-        }}
-      >
-        w.
-      </span>
-    );
-  }
-
+function RecognitionLogo({
+  logoType,
+}: {
+  logoType: RecognitionLogoType;
+}) {
   if (logoType === "figma") {
     return (
       <svg
@@ -65,7 +60,7 @@ function AwardLogo({ logoType }: { logoType: AwardLogoType }) {
         viewBox="0 0 38 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Figma logo"
+        aria-label="UI and UX design icon"
       >
         <path
           d="M10 4H19V20H10C5.58 20 2 16.42 2 12C2 7.58 5.58 4 10 4Z"
@@ -92,39 +87,136 @@ function AwardLogo({ logoType }: { logoType: AwardLogoType }) {
     );
   }
 
+  if (logoType === "developer") {
+    return (
+      <svg
+        width="47"
+        height="38"
+        viewBox="0 0 64 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Web development icon"
+      >
+        <path
+          d="M23 12L10 24L23 36"
+          stroke="#606060"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M41 12L54 24L41 36"
+          stroke="#606060"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M36 8L28 40"
+          stroke="#606060"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (logoType === "hackathon") {
+    return (
+      <svg
+        width="43"
+        height="40"
+        viewBox="0 0 64 56"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Hackathon icon"
+        className="-rotate-[6deg]"
+      >
+        <path
+          d="M8 45L15 11"
+          stroke="#606060"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+        />
+
+        <path d="M16 11L29 8L26 20L13 23L16 11Z" fill="#606060" />
+        <path d="M29 8L42 6L40 18L26 20L29 8Z" fill="#FFFFFF" />
+        <path d="M42 6L55 5L54 16L40 18L42 6Z" fill="#606060" />
+
+        <path d="M13 23L26 20L24 32L11 35L13 23Z" fill="#FFFFFF" />
+        <path d="M26 20L40 18L38 30L24 32L26 20Z" fill="#606060" />
+        <path d="M40 18L54 16L52 28L38 30L40 18Z" fill="#FFFFFF" />
+
+        <path d="M11 35L24 32L22 44L9 47L11 35Z" fill="#606060" />
+        <path d="M24 32L38 30L36 42L22 44L24 32Z" fill="#FFFFFF" />
+        <path d="M38 30L52 28L50 40L36 42L38 30Z" fill="#606060" />
+      </svg>
+    );
+  }
+
   return (
     <svg
-      width="38"
-      height="31"
-      viewBox="0 0 66 48"
+      width="42"
+      height="42"
+      viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Checkered flag"
-      className="-rotate-[8deg]"
+      aria-label="Project finalist icon"
     >
       <path
-        d="M8 37L14 10"
+        d="M18 8H38V18C38 27.9411 33.5228 34 28 34C22.4772 34 18 27.9411 18 18V8Z"
         stroke="#606060"
-        strokeWidth="3"
+        strokeWidth="3.5"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M18 13H10V17C10 23.0751 14.9249 28 21 28"
+        stroke="#606060"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M38 13H46V17C46 23.0751 41.0751 28 35 28"
+        stroke="#606060"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M28 34V42"
+        stroke="#606060"
+        strokeWidth="3.5"
         strokeLinecap="round"
       />
 
-      <path d="M15 10L25 7L23 17L13 20L15 10Z" fill="#606060" />
-      <path d="M25 7L35 5L33 15L23 17L25 7Z" fill="#FFFFFF" />
-      <path d="M35 5L45 4L44 13L33 15L35 5Z" fill="#606060" />
+      <path
+        d="M20 48H36"
+        stroke="#606060"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
 
-      <path d="M13 20L23 17L21 27L11 30L13 20Z" fill="#FFFFFF" />
-      <path d="M23 17L33 15L32 25L21 27L23 17Z" fill="#606060" />
-      <path d="M33 15L44 13L43 23L32 25L33 15Z" fill="#FFFFFF" />
-
-      <path d="M11 30L21 27L19 37L9 40L11 30Z" fill="#606060" />
-      <path d="M21 27L32 25L30 35L19 37L21 27Z" fill="#FFFFFF" />
-      <path d="M32 25L43 23L42 33L30 35L32 25Z" fill="#606060" />
+      <path
+        d="M23 42H33"
+        stroke="#606060"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 
-function LaurelAward({ logoType }: { logoType: AwardLogoType }) {
+function LaurelRecognition({
+  logoType,
+}: {
+  logoType: RecognitionLogoType;
+}) {
   return (
     <div className="relative flex h-[120px] w-[150px] items-center justify-center sm:h-[128px] sm:w-[164px]">
       <img
@@ -136,7 +228,7 @@ function LaurelAward({ logoType }: { logoType: AwardLogoType }) {
       />
 
       <div className="relative z-10 flex items-center justify-center pt-2">
-        <AwardLogo logoType={logoType} />
+        <RecognitionLogo logoType={logoType} />
       </div>
     </div>
   );
@@ -205,7 +297,8 @@ export default function RecognitionSection() {
           <span
             className="mb-1 select-none text-[#9A9A9A]"
             style={{
-              fontFamily: "Arial, Helvetica, sans-serif",
+              fontFamily:
+                '"Stack Sans Headline", system-ui, sans-serif',
               fontSize: "16px",
               fontWeight: 500,
               textTransform: "uppercase",
@@ -219,35 +312,50 @@ export default function RecognitionSection() {
             className="mb-12 select-none leading-tight tracking-tight text-[#111111] md:mb-16"
             style={{
               fontFamily:
-                '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif',
-              fontSize: "32px",
+                '"Stack Sans Notch", system-ui, sans-serif',
+              fontSize: "clamp(22px, 3.5vw, 32px)",
               fontWeight: 400,
             }}
           >
-            A <span className="text-[#5C5C5C]">shelf</span> of awards.
+            Roles, projects and{" "}
+            <span className="text-[#5C5C5C]">
+              recognition.
+            </span>
           </h2>
 
-          {/* Awards Grid */}
+          {/* Recognition Grid */}
           <div className="grid w-full grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-4 md:gap-x-8">
-            {AWARDS.map((award) => (
+            {RECOGNITIONS.map((recognition) => (
               <motion.article
-                key={award.id}
+                key={recognition.id}
                 variants={itemVariants}
                 className="group flex min-w-0 flex-col items-center text-center"
               >
                 {/* Garland */}
-                <div>
-                  <LaurelAward logoType={award.logoType} />
-                </div>
+                <LaurelRecognition
+                  logoType={recognition.logoType}
+                />
 
-                {/* Award Title */}
-                <h3 className="font-stack-notch mt-4 max-w-[220px] text-[15px] font-semibold leading-[1.2] tracking-[-0.01em] text-[#111111] transition-colors duration-300 group-hover:text-black md:text-[16px]">
-                  {award.title}
+                {/* Recognition Title */}
+                <h3
+                  className="mt-4 max-w-[220px] text-[15px] font-semibold leading-[1.2] tracking-[-0.01em] text-[#111111] transition-colors duration-300 group-hover:text-black md:text-[16px]"
+                  style={{
+                    fontFamily:
+                      '"Stack Sans Notch", system-ui, sans-serif',
+                  }}
+                >
+                  {recognition.title}
                 </h3>
 
-                {/* Award Details */}
-                <p className="mt-1 max-w-[220px] text-[12px] font-normal leading-normal text-[#767676] md:text-[13px]">
-                  {award.subtitle} {award.year}
+                {/* Recognition Details */}
+                <p
+                  className="mt-1 max-w-[220px] text-[12px] font-normal leading-normal text-[#767676] md:text-[13px]"
+                  style={{
+                    fontFamily:
+                      '"Stack Sans Notch", system-ui, sans-serif',
+                  }}
+                >
+                  {recognition.subtitle} {recognition.year}
                 </p>
               </motion.article>
             ))}

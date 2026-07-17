@@ -63,7 +63,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="relative h-[36px] px-[20px] text-[14px] font-normal uppercase tracking-normal rounded-[10px] focus:outline-none cursor-pointer flex items-center justify-center decoration-none no-underline"
+              className="relative h-[34px] sm:h-[36px] px-2.5 sm:px-[20px] text-[12px] sm:text-[14px] font-normal uppercase tracking-normal rounded-[10px] focus:outline-none cursor-pointer flex items-center justify-center decoration-none no-underline"
             >
               {isActive && (
                 <motion.span

@@ -17,7 +17,7 @@ function ImageCard({ src, alt, delay, index, isProfile = false }: ImageCardProps
 
   return (
     <div
-      className="relative flex-1 overflow-hidden rounded-[24px] md:rounded-[32px] border border-border-light/80 bg-[#f4f4f0] shadow-sm h-[400px] md:h-[350px] gpu will-change-transform isolate"
+      className="relative flex-1 overflow-hidden rounded-[24px] md:rounded-[32px] border border-border-light/80 bg-[#f4f4f0] shadow-sm h-[240px] md:h-[350px] gpu will-change-transform isolate"
     >
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element

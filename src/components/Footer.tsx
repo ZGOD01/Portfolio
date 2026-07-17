@@ -191,7 +191,7 @@ export default function Footer() {
             className="select-none tracking-[-0.05em]"
             style={{
               ...stackFont,
-              fontSize: "clamp(42px, 5.2vw, 76px)",
+              fontSize: "clamp(34px, 5.2vw, 76px)",
               fontWeight: 400,
               lineHeight: 1.02,
             }}
@@ -271,7 +271,7 @@ export default function Footer() {
                 </p>
 
                 <a
-                  href="mailto:om@example.com"
+                  href="/contact"
                   className="
                     group mt-5 inline-flex h-[52px]
                     items-center justify-center gap-2
@@ -366,7 +366,7 @@ export default function Footer() {
                 </p>
 
                 <a
-                  href="mailto:om@example.com"
+                  href="mailto:zgod1549@gmail.com"
                   className="
                     break-all text-[16px] font-medium
                     leading-none text-[#111111]

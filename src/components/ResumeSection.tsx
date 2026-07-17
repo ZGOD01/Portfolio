@@ -118,7 +118,7 @@ export default function ResumeSection() {
         <div className="w-full max-w-[850px] mt-16 flex flex-col gap-10 relative z-20">
           
           {/* Page 1 */}
-          <div className="w-full bg-white border border-[#FFECEB] rounded-[16px] shadow-[0_10px_35px_rgba(242,50,44,0.04)] p-10 md:p-14 text-left flex flex-col gap-8">
+          <div className="w-full bg-white border border-[#FFECEB] rounded-[16px] shadow-[0_10px_35px_rgba(242,50,44,0.04)] p-5 sm:p-10 md:p-14 text-left flex flex-col gap-8">
             
             {/* Header info */}
             <div className="flex flex-col md:flex-row justify-between items-start gap-4">
@@ -275,7 +275,7 @@ export default function ResumeSection() {
           </div>
 
           {/* Page 2 */}
-          <div className="w-full bg-white border border-[#FFECEB] rounded-[16px] shadow-[0_10px_35px_rgba(242,50,44,0.04)] p-10 md:p-14 text-left flex flex-col gap-8">
+          <div className="w-full bg-white border border-[#FFECEB] rounded-[16px] shadow-[0_10px_35px_rgba(242,50,44,0.04)] p-5 sm:p-10 md:p-14 text-left flex flex-col gap-8">
             
             {/* Projects */}
             <div className="flex flex-col gap-6">
@@ -285,11 +285,11 @@ export default function ResumeSection() {
 
               {/* Project 1 */}
               <div className="flex flex-col gap-1.5">
-                <div className="flex justify-between items-baseline">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-baseline gap-0.5 sm:gap-4">
                   <h3 className="text-[16px] md:text-[17px] font-bold text-[#111111]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     S2C / Sketch to Code (AI Code Generation Website)
                   </h3>
-                  <span className="text-[13px] text-[#A4A4A4] font-semibold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+                  <span className="text-[12px] sm:text-[13px] text-[#A4A4A4] font-semibold shrink-0" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     Next.js · Convex · AI SDK · March 2026
                   </span>
                 </div>
@@ -301,11 +301,11 @@ export default function ResumeSection() {
 
               {/* Project 2 */}
               <div className="flex flex-col gap-1.5 mt-2">
-                <div className="flex justify-between items-baseline">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-baseline gap-0.5 sm:gap-4">
                   <h3 className="text-[16px] md:text-[17px] font-bold text-[#111111]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     SPPU Notes App (Educational Mobile Platform)
                   </h3>
-                  <span className="text-[13px] text-[#A4A4A4] font-semibold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+                  <span className="text-[12px] sm:text-[13px] text-[#A4A4A4] font-semibold shrink-0" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     React Native · Expo · Firebase · Moti · May 2026
                   </span>
                 </div>
@@ -316,11 +316,11 @@ export default function ResumeSection() {
 
               {/* Project 3 */}
               <div className="flex flex-col gap-1.5 mt-2">
-                <div className="flex justify-between items-baseline">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-baseline gap-0.5 sm:gap-4">
                   <h3 className="text-[16px] md:text-[17px] font-bold text-[#111111]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     Clothifyy (AI Virtual Wardrobe App)
                   </h3>
-                  <span className="text-[13px] text-[#A4A4A4] font-semibold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+                  <span className="text-[12px] sm:text-[13px] text-[#A4A4A4] font-semibold shrink-0" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     React Native · Expo · Firebase · OpenAI · Jan 2026
                   </span>
                 </div>
@@ -331,11 +331,11 @@ export default function ResumeSection() {
 
               {/* Project 4 */}
               <div className="flex flex-col gap-1.5 mt-2">
-                <div className="flex justify-between items-baseline">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-baseline gap-0.5 sm:gap-4">
                   <h3 className="text-[16px] md:text-[17px] font-bold text-[#111111]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     Repwise (Fitness Tracking Mobile App)
                   </h3>
-                  <span className="text-[13px] text-[#A4A4A4] font-semibold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+                  <span className="text-[12px] sm:text-[13px] text-[#A4A4A4] font-semibold shrink-0" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                     React Native · Expo · AsyncStorage · Nov 2025
                   </span>
                 </div>

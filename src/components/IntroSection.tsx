@@ -85,9 +85,6 @@ export default function IntroSection() {
                 PROJECTS<br />DELIVERED
               </span>
             </div>
-
-            {/* Divider 2 */}
-            <div className="h-16 w-px bg-[#E5E5E2] shrink-0" />
           </div>
         </motion.div>
       </div>

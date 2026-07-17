@@ -36,15 +36,15 @@ export default function WorksSection() {
               MY WORKS
             </span>
             <h2
-              className="select-none leading-[1.2] tracking-[-0.035em] text-[#111111] text-[28px] sm:text-[32px]"
-              style={{ fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif', fontSize: "32px", fontWeight: 400 }}
+              className="select-none leading-[1.2] tracking-[-0.035em] text-[#111111] text-[26px] sm:text-[32px]"
+              style={{ fontFamily: '"Stack Sans Notch", system-ui, sans-serif', fontWeight: 400 }}
             >
               Few things shipped <span className="text-[#9A9A9A]">for others.</span>
             </h2>
           </div>
           <div className="flex items-center shrink-0">
             <a
-              href="#"
+              href="/work"
               className="inline-flex items-center gap-1.5 rounded-[12px] border border-[#E5E5E5] bg-[#F7F7F7] px-[20px] py-[10.5px] text-[15px] font-medium text-[#111111] transition-all duration-300 hover:bg-[#EAEAEA] hover:shadow-sm active:scale-[0.98]"
               style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
@@ -75,8 +75,8 @@ export default function WorksSection() {
               </div>
 
               <h3
-                className="leading-[1.25] tracking-[-0.03em] text-white select-none font-normal"
-                style={{ fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif', fontSize: "32px" }}
+                className="leading-[1.25] tracking-[-0.03em] text-white select-none font-normal text-[26px] sm:text-[32px]"
+                style={{ fontFamily: '"Stack Sans Notch", system-ui, sans-serif' }}
               >
                 Sketch Your Ideas.<br />Let AI Design the Actual UI.
               </h3>
@@ -153,8 +153,8 @@ export default function WorksSection() {
               </div>
 
               <h3
-                className="leading-[1.25] tracking-[-0.03em] text-[#3a0a18] select-none font-normal"
-                style={{ fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif', fontSize: "32px" }}
+                className="leading-[1.25] tracking-[-0.03em] text-[#3a0a18] select-none font-normal text-[26px] sm:text-[32px]"
+                style={{ fontFamily: '"Stack Sans Notch", system-ui, sans-serif' }}
               >
                 Your Wardrobe,<br />Styled by AI.
               </h3>
@@ -222,8 +222,8 @@ export default function WorksSection() {
               </div>
 
               <h3
-                className="leading-[1.25] tracking-[-0.03em] text-white select-none font-normal"
-                style={{ fontFamily: '"Stack Sans Notch", "Stack Sans Notch", system-ui, sans-serif', fontSize: "32px" }}
+                className="leading-[1.25] tracking-[-0.03em] text-white select-none font-normal text-[26px] sm:text-[32px]"
+                style={{ fontFamily: '"Stack Sans Notch", system-ui, sans-serif' }}
               >
                 Train Smart.<br />Get Stronger.
               </h3>

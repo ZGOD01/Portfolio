@@ -195,7 +195,7 @@ export default function PersonalIntroSection() {
                           style={{
                             fontFamily: "Arial, Helvetica, sans-serif",
                             color: shouldShowChecked ? "#ABABAB" : "#333",
-                            textDecoration: shouldShowChecked ? "line-through" : "none",
+                            textDecorationLine: shouldShowChecked ? "line-through" : "none",
                             textDecorationColor: "#ABABAB",
                           }}
                         >
