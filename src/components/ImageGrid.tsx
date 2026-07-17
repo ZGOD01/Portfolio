@@ -17,7 +17,7 @@ function ImageCard({ src, alt, delay, index, isProfile = false }: ImageCardProps
 
   return (
     <div
-      className="relative flex-1 overflow-hidden rounded-[24px] md:rounded-[32px] border border-border-light/80 bg-[#f4f4f0] shadow-sm h-[240px] md:h-[350px] gpu will-change-transform isolate"
+      className="relative w-full overflow-hidden rounded-[24px] md:rounded-[32px] border border-border-light/80 bg-[#f4f4f0] shadow-sm h-[240px] md:h-[350px] gpu will-change-transform isolate"
     >
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -85,14 +85,18 @@ export default function ImageGrid() {
     <section className="w-full max-w-6xl mx-auto px-4 pb-12 md:pb-16">
       <div className="flex flex-col md:flex-row gap-6 md:gap-8 split-image-container">
         {images.map((img, idx) => (
-          <ImageCard
+          <div
             key={idx}
-            src={img.src}
-            alt={img.alt}
-            delay={img.delay}
-            index={idx}
-            isProfile={img.isProfile}
-          />
+            className={`w-full md:flex-1 ${idx !== 1 ? "hidden md:block" : "block"}`}
+          >
+            <ImageCard
+              src={img.src}
+              alt={img.alt}
+              delay={img.delay}
+              index={idx}
+              isProfile={img.isProfile}
+            />
+          </div>
         ))}
       </div>
     </section>

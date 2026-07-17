@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main className="flex min-h-screen w-full flex-col bg-white pt-16 md:pt-24">
+      <main className="flex min-h-screen w-full flex-col bg-white pt-24 sm:pt-28 md:pt-32">
         {/* ABOUT badge */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}

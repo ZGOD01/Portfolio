@@ -361,7 +361,7 @@ export default function WorkPage() {
   ];
 
   return (
-    <main className="flex min-h-screen w-full flex-col bg-white pt-16 md:pt-24 select-none">
+    <main className="flex min-h-screen w-full flex-col bg-white pt-24 sm:pt-28 md:pt-32 select-none">
       {/* ── WORKS badge ── */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
