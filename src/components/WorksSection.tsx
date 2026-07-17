@@ -48,7 +48,8 @@ export default function WorksSection() {
               className="inline-flex items-center gap-1.5 rounded-[12px] border border-[#E5E5E5] bg-[#F7F7F7] px-[20px] py-[10.5px] text-[15px] font-medium text-[#111111] transition-all duration-300 hover:bg-[#EAEAEA] hover:shadow-sm active:scale-[0.98]"
               style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
-              See all <span className="text-[14px]">&#8599;</span>
+              See all
+              <svg width="12" height="12" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
           </div>
         </motion.div>
@@ -109,7 +110,7 @@ export default function WorksSection() {
                 style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
               >
                 Visit Website
-                <span className="text-[13px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">&#8599;</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </a>
             </div>
 
@@ -195,7 +196,7 @@ export default function WorksSection() {
                 style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
               >
                 Visit Website
-                <span className="text-[13px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">&#8599;</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </a>
             </div>
           </div>
@@ -240,7 +241,7 @@ export default function WorksSection() {
                 style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
               >
                 View Project
-                <span className="text-[13px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">&#8599;</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </a>
             </div>
 

@@ -54,7 +54,7 @@ export default function ProofSection() {
               {/* Project Logo */}
               <div className="mb-6 flex w-full items-center">
                 <img
-                  src="/images/logo-sppu.png"
+                  src="/images/logo-sppu.PNG"
                   alt="SPPU Notes"
                   className="block h-auto w-full max-w-[260px] sm:max-w-[340px] object-contain object-left"
                 />
@@ -85,14 +85,15 @@ export default function ProofSection() {
 
               {/* Visit Project Button */}
               <a
-                href="#"
+                href="https://github.com/ZGOD01/SPPU-Notes-App"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex w-fit items-center gap-3 rounded-[12px] bg-[#111111] px-6 py-3.5 text-[15px] font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#2A2A2A] hover:shadow-lg"
               >
                 Visit Project
-
-                <span aria-hidden="true">↗</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                  <path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </a>
             </div>
           </div>
