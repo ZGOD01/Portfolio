@@ -134,7 +134,7 @@ function FeaturedCard({ project }: { project: Project }) {
       className="w-full bg-white border border-[#E5E5E2] rounded-[24px] p-4 sm:p-6 md:p-8 flex flex-col lg:flex-row gap-6 lg:gap-12 hover:shadow-[0_12px_45px_rgba(0,0,0,0.03)] transition-all duration-300"
     >
       {/* Mockup Image — renders FIRST on mobile (top), LAST on lg (right) */}
-      <div className="w-full lg:w-[44%] shrink-0 rounded-[14px] sm:rounded-[18px] overflow-hidden border border-[#E5E5E2] bg-white relative aspect-[4/3] lg:aspect-square flex items-center justify-center order-first lg:order-last">
+      <div className="w-full lg:w-[44%] shrink-0 rounded-[14px] sm:rounded-[18px] overflow-hidden border border-[#E5E5E2] bg-[#EAF4FF] relative min-h-[200px] sm:min-h-[260px] aspect-[4/3] lg:aspect-square flex items-center justify-center order-first lg:order-last">
         <img
           src={project.image}
           alt={project.imageAlt}
@@ -213,11 +213,11 @@ function FeaturedCard({ project }: { project: Project }) {
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-[42px] sm:h-[46px] items-center justify-center gap-2 rounded-[12px] bg-[#151515] hover:bg-[#2D2D2D] hover:shadow-md text-white text-[13px] sm:text-[14px] font-semibold transition-all px-5 sm:px-6 active:scale-[0.98]"
+            className="inline-flex h-[42px] sm:h-[46px] items-center justify-center gap-3 rounded-[12px] bg-[#151515] hover:bg-[#2D2D2D] hover:shadow-md hover:-translate-y-0.5 text-white text-[13px] sm:text-[14px] font-medium transition-all px-5 sm:px-6 active:scale-[0.98]"
             style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
             <span>View Project</span>
-            <ExternalLink size={13} strokeWidth={2.5} />
+            <span aria-hidden="true" className="text-[16px] leading-none">↗</span>
           </a>
         </div>
       </div>
