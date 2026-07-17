@@ -131,15 +131,24 @@ function FeaturedCard({ project }: { project: Project }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.8, ease: smoothEase }}
-      className="w-full bg-white border border-[#E5E5E2] rounded-[24px] p-6 md:p-8 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-[0_12px_45px_rgba(0,0,0,0.03)] transition-all duration-300"
+      className="w-full bg-white border border-[#E5E5E2] rounded-[24px] p-4 sm:p-6 md:p-8 flex flex-col lg:flex-row gap-6 lg:gap-12 hover:shadow-[0_12px_45px_rgba(0,0,0,0.03)] transition-all duration-300"
     >
+      {/* Mockup Image — renders FIRST on mobile (top), LAST on lg (right) */}
+      <div className="w-full lg:w-[44%] shrink-0 rounded-[14px] sm:rounded-[18px] overflow-hidden border border-[#E5E5E2] bg-white relative aspect-[4/3] lg:aspect-square flex items-center justify-center order-first lg:order-last">
+        <img
+          src={project.image}
+          alt={project.imageAlt}
+          className="w-full h-full object-contain p-2"
+        />
+      </div>
+
       {/* Left side: Info & Meta */}
-      <div className="flex-1 flex flex-col justify-between">
+      <div className="flex-1 flex flex-col justify-between order-last lg:order-first">
         <div>
           {/* Title and Featured Badge */}
-          <div className="flex items-center gap-4 flex-wrap">
+          <div className="flex items-center gap-3 flex-wrap">
             <h2
-              className="text-[28px] md:text-[36px] font-bold text-black tracking-tight"
+              className="text-[22px] sm:text-[28px] md:text-[36px] font-bold text-black tracking-tight"
               style={{ fontFamily: '"Stack Sans Notch", system-ui, sans-serif' }}
             >
               {project.name}
@@ -152,7 +161,7 @@ function FeaturedCard({ project }: { project: Project }) {
           </div>
 
           {/* Description */}
-          <p className="text-[14.5px] leading-[1.65] text-[#5C5C5C] font-normal my-6" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+          <p className="text-[13.5px] sm:text-[14.5px] leading-[1.65] text-[#5C5C5C] font-normal my-4 sm:my-6" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
             {project.description}
           </p>
         </div>
@@ -160,35 +169,35 @@ function FeaturedCard({ project }: { project: Project }) {
         {/* Metadata Table */}
         <div className="border-t border-[#E5E5E2] mt-auto">
           {/* Row 1: ROLE */}
-          <div className="flex items-center py-4 border-b border-[#E5E5E2] text-[13.5px] font-normal">
-            <span className="w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[11px] uppercase">
+          <div className="flex items-start sm:items-center py-3 sm:py-4 border-b border-[#E5E5E2] text-[13.5px] font-normal gap-2">
+            <span className="w-[80px] sm:w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[10px] sm:text-[11px] uppercase pt-[2px] sm:pt-0">
               ROLE
             </span>
-            <span className="text-[#111111] font-medium" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+            <span className="text-[#111111] font-medium text-[13px] sm:text-[13.5px]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
               {project.role}
             </span>
           </div>
 
           {/* Row 2: MARKET */}
-          <div className="flex items-center py-4 border-b border-[#E5E5E2] text-[13.5px] font-normal">
-            <span className="w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[11px] uppercase">
+          <div className="flex items-start sm:items-center py-3 sm:py-4 border-b border-[#E5E5E2] text-[13.5px] font-normal gap-2">
+            <span className="w-[80px] sm:w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[10px] sm:text-[11px] uppercase pt-[2px] sm:pt-0">
               MARKET
             </span>
-            <span className="text-[#111111] font-medium" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+            <span className="text-[#111111] font-medium text-[13px] sm:text-[13.5px]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
               {project.market}
             </span>
           </div>
 
           {/* Row 3: TAGS */}
-          <div className="flex items-center py-4 text-[13.5px] font-normal">
-            <span className="w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[11px] uppercase">
+          <div className="flex items-start py-3 sm:py-4 text-[13.5px] font-normal gap-2">
+            <span className="w-[80px] sm:w-[100px] shrink-0 font-bold tracking-wider text-[#A4A4A4] text-[10px] sm:text-[11px] uppercase pt-[2px]">
               TAGS
             </span>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-[#F7F7F7] text-[#555555] rounded-[6px] px-2.5 py-1 text-[11px] font-bold border border-[#E5E5E5] tracking-wide"
+                  className="bg-[#F7F7F7] text-[#555555] rounded-[6px] px-2 sm:px-2.5 py-1 text-[10px] sm:text-[11px] font-bold border border-[#E5E5E5] tracking-wide"
                   style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
                 >
                   {tag}
@@ -199,12 +208,12 @@ function FeaturedCard({ project }: { project: Project }) {
         </div>
 
         {/* View Project CTA */}
-        <div className="mt-6">
+        <div className="mt-4 sm:mt-6">
           <a
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-[46px] items-center justify-center gap-2 rounded-[12px] bg-[#151515] hover:bg-[#2D2D2D] hover:shadow-md text-white text-[14px] font-semibold transition-all px-6 active:scale-[0.98]"
+            className="inline-flex h-[42px] sm:h-[46px] items-center justify-center gap-2 rounded-[12px] bg-[#151515] hover:bg-[#2D2D2D] hover:shadow-md text-white text-[13px] sm:text-[14px] font-semibold transition-all px-5 sm:px-6 active:scale-[0.98]"
             style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
             <span>View Project</span>
@@ -212,18 +221,10 @@ function FeaturedCard({ project }: { project: Project }) {
           </a>
         </div>
       </div>
-
-      {/* Right side: Mockup Image */}
-      <div className="w-full lg:w-[44%] shrink-0 rounded-[18px] overflow-hidden border border-[#E5E5E2] bg-white relative aspect-[4/3] lg:aspect-square flex items-center justify-center">
-        <img
-          src={project.image}
-          alt={project.imageAlt}
-          className="w-full h-full object-contain p-2"
-        />
-      </div>
     </motion.div>
   );
 }
+
 
 /* ─────────────────────────────────────────────
    3-column Grid project card (image inside, text outside)
