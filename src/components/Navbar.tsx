@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
   { label: "WORKS", href: "/work" },
-  { label: "RESUME", href: "/#resume" },
+  { label: "RESUME", href: "/resume" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -26,6 +26,8 @@ export default function Navbar() {
       ? "WORKS"
       : pathname === "/contact"
       ? "CONTACT"
+      : pathname === "/resume"
+      ? "RESUME"
       : "HOME";
 
   useEffect(() => {
