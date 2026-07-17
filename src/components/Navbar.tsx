@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 const NAV_ITEMS = [
   { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
-  { label: "WORKS", href: "/#works" },
+  { label: "WORKS", href: "/work" },
   { label: "RESUME", href: "/#resume" },
-  { label: "CONTACT", href: "/#contact" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -19,7 +19,14 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   // Active state logic matching pathname
-  const activeItem = pathname === "/about" ? "ABOUT" : "HOME";
+  const activeItem =
+    pathname === "/about"
+      ? "ABOUT"
+      : pathname === "/work"
+      ? "WORKS"
+      : pathname === "/contact"
+      ? "CONTACT"
+      : "HOME";
 
   useEffect(() => {
     const handleScroll = () => {
